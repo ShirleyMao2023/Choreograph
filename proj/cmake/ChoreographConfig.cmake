@@ -7,16 +7,16 @@ if(NOT TARGET Choreograph)
 
     # Make a list of source files and define that to be ${SOURCE_LIST}.
     file(GLOB SOURCE_LIST CONFIGURE_DEPENDS
-            "${Choreograph_PROJECT_ROOT}/src/**/*.h"
-            "${Choreograph_PROJECT_ROOT}/src/**/*.hpp"
-            "${Choreograph_PROJECT_ROOT}/src/**/*.cc"
-            "${Choreograph_PROJECT_ROOT}/src/**/*.cpp"
-            "${Choreograph_PROJECT_ROOT}/src/**/*.c"
-            "${Choreograph_PROJECT_ROOT}/src/*.h"
-            "${Choreograph_PROJECT_ROOT}/src/*.hpp"
-            "${Choreograph_PROJECT_ROOT}/src/*.cc"
-            "${Choreograph_PROJECT_ROOT}/src/*.cpp"
-            "${Choreograph_PROJECT_ROOT}/src/*.c")
+            "${Choreograph_PROJECT_ROOT}/src/choreograph/**/*.h"
+            "${Choreograph_PROJECT_ROOT}/src/choreograph/**/*.hpp"
+            "${Choreograph_PROJECT_ROOT}/src/choreograph/**/*.cc"
+            "${Choreograph_PROJECT_ROOT}/src/choreograph/**/*.cpp"
+            "${Choreograph_PROJECT_ROOT}/src/choreograph/**/*.c"
+            "${Choreograph_PROJECT_ROOT}/src/choreograph/*.h"
+            "${Choreograph_PROJECT_ROOT}/src/choreograph/*.hpp"
+            "${Choreograph_PROJECT_ROOT}/src/choreograph/*.cc"
+            "${Choreograph_PROJECT_ROOT}/src/choreograph/*.cpp"
+            "${Choreograph_PROJECT_ROOT}/src/choreograph/*.c")
 
     # Create the library!
     add_library(Cinder-Notifications ${SOURCE_LIST})
