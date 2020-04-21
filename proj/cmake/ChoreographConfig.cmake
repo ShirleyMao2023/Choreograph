@@ -19,13 +19,13 @@ if(NOT TARGET Choreograph)
             "${Choreograph_PROJECT_ROOT}/src/choreograph/*.c")
 
     # Create the library!
-    add_library(Cinder-Notifications ${SOURCE_LIST})
+    add_library(Choreograph ${SOURCE_LIST})
 
     # Add include directories.
     # Notice that `cinderblock.xml` has `<includePath>src</includePath>`.
     # So you need to set `../../src/` to include.
-    target_include_directories(Cinder-Notifications PUBLIC "${Choreograph_PROJECT_ROOT}/src" )
-    target_include_directories(Cinder-Notifications SYSTEM BEFORE PUBLIC "${CINDER_PATH}/include" )
+    target_include_directories(Choreograph PUBLIC "${Choreograph_PROJECT_ROOT}/src" )
+    target_include_directories(Choreograph SYSTEM BEFORE PUBLIC "${CINDER_PATH}/include" )
 
 
     # If your Cinder block has no source code but instead pre-build libraries,
@@ -39,6 +39,6 @@ if(NOT TARGET Choreograph)
                 "${CINDER_PATH}/${CINDER_LIB_DIRECTORY}"
                 "$ENV{CINDER_PATH}/${CINDER_LIB_DIRECTORY}")
     endif()
-    target_link_libraries(Cinder-Notifications PRIVATE cinder)
+    target_link_libraries(Choreograph PRIVATE cinder)
 
 endif()
